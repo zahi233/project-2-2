@@ -1,15 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 2;
+    padding: 2;
+
+}
+
+:root {
+    --main-padding: 4px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "main-content location"
+        grid-gap: 2rem;
+}
+
+.main-content {
+    padding: var(--main-padding) var(--main-padding) 0 var(--main-padding);
+}
+
+.location {
+    padding: var(--main-padding) var(--main-padding) 0 var(--main-padding);
+}
+
+
 body {
     font-size: 16px;
     background-color: #f4f4f4;
     font-family: sans-serif;
     color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 3em;
     /* shorthand for TOP RIGHT BOTTOM LEFT */
     /* margin: 1em 0 1.5em 0; */
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
 }
 
 h2 {
@@ -39,8 +70,10 @@ p {
 
 header,
 footer {
-    background-color: #003300;
+    background-image: url(cssimages/801f0b350f7217acbed65a915e1991eb.jpg);
+    background-size: cover;
     padding: 2em 0;
+    background-blend-mode: ;
 }
 
 .hero {
@@ -113,10 +146,21 @@ main {
 }
 
 .main-content img {
-    width: 50%;
+    width: 80%;
 }
 
 @media (max-width:550px) {
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.2fr;
+        grid-template-areas:
+            "main-content"
+            "location";
+        grid-gap: 0.7rem;
+    }
+
     .main-content img {
         width: 100%;
     }
