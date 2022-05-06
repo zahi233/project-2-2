@@ -27,6 +27,9 @@
     padding: var(--main-padding) var(--main-padding) 0 var(--main-padding);
 }
 
+.small {
+    display: none;
+}
 
 body {
     font-size: 16px;
@@ -147,6 +150,25 @@ main {
 
 .main-content img {
     width: 80%;
+}
+
+@media (min-width:551px) and (max-width:1200px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 0.3fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "main-content location"
+            grid-gap: 2rem;
+    }
+
+    .large {
+        display: none
+    }
+
+    .small {
+        display: block
+    }
 }
 
 @media (max-width:550px) {
